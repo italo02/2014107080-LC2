@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{493DB2F0-9AC1-4274-8912-B002F658A3DC}</ProjectGuid>
+    <ProjectGuid>{2B190291-8F73-4DB9-BB55-27F0D9F12A5E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_2014107080_PER</RootNamespace>
-    <AssemblyName>2014107080-PER</AssemblyName>
+    <RootNamespace>_2014118110_PER</RootNamespace>
+    <AssemblyName>2014118110-PER</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,11 +32,9 @@
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -49,37 +47,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntitiesConfiguration\BusConfiguration.cs" />
-    <Compile Include="EntitiesConfiguration\ClienteConfiguration.cs" />
-    <Compile Include="EntitiesConfiguration\EmpleadoConfiguration.cs" />
-    <Compile Include="EntitiesConfiguration\LugarViajeConfiguration.cs" />
-    <Compile Include="EntitiesConfiguration\ServicioConfiguration.cs" />
-    <Compile Include="EntitiesConfiguration\TipoComprobanteConfiguration.cs" />
-    <Compile Include="EntitiesConfiguration\TipoLugarConfiguration.cs" />
-    <Compile Include="EntitiesConfiguration\TipoPagoConfiguration.cs" />
-    <Compile Include="EntitiesConfiguration\TipoTripulacionConfiguration.cs" />
-    <Compile Include="EntitiesConfiguration\TipoViajeConfiguration.cs" />
-    <Compile Include="EntitiesConfiguration\VentaConfiguration.cs" />
-    <Compile Include="Migrations\201705152142274_InitialModel.cs" />
-    <Compile Include="Migrations\201705152142274_InitialModel.Designer.cs">
-      <DependentUpon>201705152142274_InitialModel.cs</DependentUpon>
+    <Compile Include="EntititesConfiguration\VentaConfiguration.cs" />
+    <Compile Include="EntititesConfiguration\TipoViajeConfiguration.cs" />
+    <Compile Include="EntititesConfiguration\TipoTripulacionConfiguration.cs" />
+    <Compile Include="EntititesConfiguration\TipoPagoConfiguration.cs" />
+    <Compile Include="EntititesConfiguration\TipoLugarConfiguration.cs" />
+    <Compile Include="EntititesConfiguration\TipoComprobanteConfiguration.cs" />
+    <Compile Include="EntititesConfiguration\ServicioConfiguration.cs" />
+    <Compile Include="EntititesConfiguration\LugarViajeConfiguration.cs" />
+    <Compile Include="EntititesConfiguration\EmpleadoConfiguration.cs" />
+    <Compile Include="EntititesConfiguration\ClienteConfiguration.cs" />
+    <Compile Include="EntititesConfiguration\BusConfiguration.cs" />
+    <Compile Include="Migrations\201705310946557_InitialModel.cs" />
+    <Compile Include="Migrations\201705310946557_InitialModel.Designer.cs">
+      <DependentUpon>201705310946557_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706050258572_UpdateChanges.cs" />
+    <Compile Include="Migrations\201706050258572_UpdateChanges.Designer.cs">
+      <DependentUpon>201706050258572_UpdateChanges.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Repositories\AdministrativoRepository.cs" />
     <Compile Include="Repositories\BusRepository.cs" />
     <Compile Include="Repositories\ClienteRepository.cs" />
-    <Compile Include="Repositories\EmpleadoRepository.cs" />
-    <Compile Include="Repositories\EncomiendaRepository.cs" />
-    <Compile Include="Repositories\LugarViajeRepository.cs" />
-    <Compile Include="Repositories\Repository.cs" />
-    <Compile Include="Repositories\ServicioRepository.cs" />
-    <Compile Include="Repositories\TipoComprobanteRepository.cs" />
-    <Compile Include="Repositories\TipoLugarRepository.cs" />
-    <Compile Include="Repositories\TipoPagoRepository.cs" />
-    <Compile Include="Repositories\TipoTripulacionRepository.cs" />
-    <Compile Include="Repositories\TipoViajeRepository.cs" />
-    <Compile Include="Repositories\TransporteRepository.cs" />
     <Compile Include="Repositories\TripulacionRepository.cs" />
+    <Compile Include="Repositories\TransporteRepository.cs" />
+    <Compile Include="Repositories\TipoViajeRepository.cs" />
+    <Compile Include="Repositories\TipoTripulacionRepository.cs" />
+    <Compile Include="Repositories\TipoPagoRepository.cs" />
+    <Compile Include="Repositories\TipoLugarRepository.cs" />
+    <Compile Include="Repositories\TipoComprobanteRepository.cs" />
+    <Compile Include="Repositories\ServicioRepository.cs" />
+    <Compile Include="Repositories\LugarViajeRepository.cs" />
+    <Compile Include="Repositories\EncomiendaRepository.cs" />
+    <Compile Include="Repositories\EmpleadoRepository.cs" />
+    <Compile Include="Repositories\AdministrativoRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Repositories\UnityOfWork.cs" />
     <Compile Include="Repositories\VentaRepository.cs" />
     <Compile Include="TransporteDbContext.cs" />
@@ -87,8 +89,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\2014107080-ENT\2014107080-ENT.csproj">
-      <Project>{8e89a348-2795-4690-8bb1-b45b6fc896bd}</Project>
-      <Name>2014107080-ENT</Name>
+      <Project>{90563452-bfe5-479b-96ab-28166ad2ab64}</Project>
+      <Name>2014118110-ENT</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -96,16 +98,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705152142274_InitialModel.resx">
-      <DependentUpon>201705152142274_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705310946557_InitialModel.resx">
+      <DependentUpon>201705310946557_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706050258572_UpdateChanges.resx">
+      <DependentUpon>201706050258572_UpdateChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

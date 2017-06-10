@@ -12,8 +12,17 @@ namespace _2014107080_ENT
         public string NombreServicio { get; set; }
         public decimal Tarifa { get; set; }
 
-        public int VentaId { get; set; }
-        public Venta Venta { get; set; }
+        public virtual int VentaId { get; set; }
+        public virtual Venta Venta { get; set; }
+
+        public virtual ICollection<Bus> Bus { get; set; }
+        public virtual ICollection<LugarViaje> LugarViaje { get; set; }
+
+        public Servicio()
+        {
+            Bus = new List<Bus>();
+            LugarViaje = new List<LugarViaje>();
+        }
 
     }
 }

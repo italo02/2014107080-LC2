@@ -14,5 +14,10 @@ namespace _2014107080_ENT
         public string DNI { get; set; }
         public int Edad { get; set; }
         public decimal Sueldo { get; set; }
+
+        public Empleado()
+        {
+            
+        }
     }
 }

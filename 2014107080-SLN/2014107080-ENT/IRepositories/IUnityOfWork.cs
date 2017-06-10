@@ -25,5 +25,7 @@ namespace _2014107080_ENT.IRepositories
         IVentaRepository Ventas { get; }
 
         int SaveChanges();
+
+        void StateModified(object entity);
     }
 }

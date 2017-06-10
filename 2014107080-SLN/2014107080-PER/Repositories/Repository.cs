@@ -13,59 +13,51 @@ namespace _2014107080_PER.Repositories
     {
         private readonly DbContext _Context;
 
-        protected Repository()
-        {
-
-        }
 
         public Repository(DbContext context)
         {
             _Context = context;
         }
 
-        void IRepository<TEntity>.Add(TEntity entity)
+        public IQueryable<TEntity> GetEntity()
         {
-            throw new NotImplementedException();
+            return _Context.Set<TEntity>();
         }
 
-        void IRepository<TEntity>.AddRange(IEnumerable<TEntity> entities)
+        public void Add(TEntity entity)
         {
-            throw new NotImplementedException();
+            _Context.Set<TEntity>().Add(entity);
         }
 
-        IEnumerable<TEntity> IRepository<TEntity>.Find(Expression<Func<TEntity, bool>> predicate)
+        public void AddRange(IEnumerable<TEntity> entities)
         {
-            throw new NotImplementedException();
+            _Context.Set<TEntity>().AddRange(entities);
         }
 
-        TEntity IRepository<TEntity>.Get(int id)
+        public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return _Context.Set<TEntity>().Where(predicate);
         }
 
-        IEnumerable<TEntity> IRepository<TEntity>.GetAll()
+        public TEntity Get(int? id)
         {
-            throw new NotImplementedException();
+            return _Context.Set<TEntity>().Find(id);
         }
 
-        void IRepository<TEntity>.Remove(TEntity entity)
+        public IEnumerable<TEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return _Context.Set<TEntity>().ToList();
         }
 
-        void IRepository<TEntity>.RemoveRange(IEnumerable<TEntity> entities)
+        public void Remove(TEntity entity)
         {
-            throw new NotImplementedException();
+            _Context.Set<TEntity>().Remove(entity);
         }
 
-        void IRepository<TEntity>.Update(TEntity entity)
+        public void RemoveRange(IEnumerable<TEntity> entities)
         {
-            throw new NotImplementedException();
+            _Context.Set<TEntity>().RemoveRange(entities);
         }
 
-        void IRepository<TEntity>.UpdateRange(IEnumerable<TEntity> entities)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

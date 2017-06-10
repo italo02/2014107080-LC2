@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8B9C6871-0B66-42D7-985E-688FCC060240}</ProjectGuid>
+    <ProjectGuid>{F68CE2C7-47E2-41B0-B273-7FC747BFC9F3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_2014107080_CON</RootNamespace>
-    <AssemblyName>2014107080-CON</AssemblyName>
+    <RootNamespace>_2014118110_CON</RootNamespace>
+    <AssemblyName>2014118110-CON</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -51,20 +50,13 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\2014107080-ENT\2014107080-ENT.csproj">
-      <Project>{8e89a348-2795-4690-8bb1-b45b6fc896bd}</Project>
-      <Name>2014107080-ENT</Name>
+      <Project>{90563452-bfe5-479b-96ab-28166ad2ab64}</Project>
+      <Name>2014118110-ENT</Name>
     </ProjectReference>
     <ProjectReference Include="..\2014107080-PER\2014107080-PER.csproj">
-      <Project>{493db2f0-9ac1-4274-8912-b002f658a3dc}</Project>
-      <Name>2014107080-PER</Name>
+      <Project>{2b190291-8f73-4db9-bb55-27f0d9f12a5e}</Project>
+      <Name>2014118110-PER</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
